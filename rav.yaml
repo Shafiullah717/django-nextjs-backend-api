@@ -5,4 +5,9 @@ scripts:
   - cd src && python manage.py makemigrations
  migrate:
   - cd src && python manage.py migrate
-   
+ shell:
+  - cd src && python manage.py shell  
+ curl_auth:
+    curl.exe -X POST -H "Content-Type: application/json" -d "@data.json" http://127.0.0.1:8000/api/token/pair
+ curl_protect:
+    curl.exe -X GET -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1NDM1MzcwLCJpYXQiOjE3NDU0MzUwNzAsImp0aSI6IjdhY2RiMzVlOWNhMjRjYWNiMjVlMWQ3NmY5ODRmZjkwIiwidXNlcl9pZCI6MX0.cJ-_p_F9c0GsyS4wFV9HSj3OsOsh4gvIN3sNMtZ-jWY "  http://127.0.0.1:8000/api/me   
