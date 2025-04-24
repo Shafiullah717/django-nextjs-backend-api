@@ -7,8 +7,16 @@ class WaitlistEntryCreateSchema(Schema):
     # WaitlistEntryIn
     email : EmailStr
 
+class WaitlistEntryListSchema(Schema):
+    #List -> DATA
+    # WaitlistEntryOut
+    id : int
+    email : EmailStr 
+
 class WaitlistEntryDetailSchema(Schema):
     # GET -> DATA
     # WaitlistEntryOut 
+    id : int
     email : EmailStr
+    updated : datetime
     timestamp : datetime 

@@ -4,4 +4,5 @@ from django.db import models
 class waitlistEntry(models.Model):
     # User = 
     email = models.EmailField()
+    updated = models.DateTimeField(auto_now=True)
     timestamp = models.DateTimeField(auto_now_add=True)
